@@ -1,0 +1,410 @@
+{
+ "sport-krylya": {
+  "code": "Ш-001",
+  "title": "Динамика",
+  "baseHue": 210,
+  "slots": {
+   "photo": [
+    6,
+    7,
+    9,
+    13,
+    23,
+    25,
+    29
+   ],
+   "text": [
+    1,
+    4,
+    8,
+    17,
+    20,
+    24
+   ],
+   "pattern": [
+    2,
+    3,
+    5,
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    18,
+    19,
+    21,
+    26,
+    27,
+    28,
+    30,
+    31,
+    32
+   ],
+   "technical": [
+    22
+   ]
+  },
+  "colors": [
+   {
+    "id": "siniy",
+    "name": "Синий",
+    "hue": 210,
+    "spread": 1,
+    "swatch": "#1d4fd6"
+   },
+   {
+    "id": "krasnyy",
+    "name": "Красный",
+    "hue": 355,
+    "swatch": "#c8102e"
+   },
+   {
+    "id": "zelenyy",
+    "name": "Зелёный",
+    "hue": 140,
+    "swatch": "#13924a"
+   },
+   {
+    "id": "oranzhevyy",
+    "name": "Оранжевый",
+    "hue": 24,
+    "swatch": "#ea6a12"
+   },
+   {
+    "id": "fioletovyy",
+    "name": "Фиолетовый",
+    "hue": 272,
+    "swatch": "#7a2fd0"
+   },
+   {
+    "id": "biryuzovyy",
+    "name": "Бирюзовый",
+    "hue": 178,
+    "swatch": "#0ea5a4"
+   },
+   {
+    "id": "rozovyy",
+    "name": "Розовый",
+    "hue": 330,
+    "swatch": "#d6247a"
+   },
+   {
+    "id": "chernyy",
+    "name": "Чёрный",
+    "hue": 210,
+    "sat": 0,
+    "light": 0.75,
+    "swatch": "#26262b"
+   }
+  ],
+  "layout": "sport-krylya/layout.jpg",
+  "thumb": "sport-krylya/thumb.webp"
+ },
+ "sport-strela": {
+  "code": "Ш-002",
+  "title": "Вихрь",
+  "baseHue": 4,
+  "slots": {
+   "photo": [
+    6,
+    7,
+    9,
+    13,
+    23,
+    25,
+    29
+   ],
+   "text": [
+    1,
+    4,
+    8,
+    17,
+    20,
+    24
+   ],
+   "pattern": [
+    2,
+    3,
+    5,
+    10,
+    11,
+    12,
+    14,
+    15,
+    16,
+    18,
+    19,
+    21,
+    26,
+    27,
+    28,
+    30,
+    31,
+    32
+   ],
+   "technical": [
+    22
+   ]
+  },
+  "colors": [
+   {
+    "id": "krasnyy",
+    "name": "Красный",
+    "hue": 4,
+    "spread": 1,
+    "swatch": "#d42a1f"
+   },
+   {
+    "id": "siniy",
+    "name": "Синий",
+    "hue": 215,
+    "swatch": "#1d4fd6"
+   },
+   {
+    "id": "zelenyy",
+    "name": "Зелёный",
+    "hue": 140,
+    "swatch": "#13924a"
+   },
+   {
+    "id": "oranzhevyy",
+    "name": "Оранжевый",
+    "hue": 24,
+    "swatch": "#ea6a12"
+   },
+   {
+    "id": "fioletovyy",
+    "name": "Фиолетовый",
+    "hue": 272,
+    "swatch": "#7a2fd0"
+   },
+   {
+    "id": "biryuzovyy",
+    "name": "Бирюзовый",
+    "hue": 178,
+    "swatch": "#0ea5a4"
+   },
+   {
+    "id": "rozovyy",
+    "name": "Розовый",
+    "hue": 330,
+    "swatch": "#d6247a"
+   },
+   {
+    "id": "chernyy",
+    "name": "Чёрный",
+    "hue": 210,
+    "sat": 0,
+    "light": 0.75,
+    "swatch": "#26262b"
+   }
+  ],
+  "layout": "sport-strela/layout.jpg",
+  "thumb": "sport-strela/thumb.webp"
+ },
+ "sport-volna": {
+  "code": "Ш-003",
+  "title": "Волна",
+  "baseHue": 160,
+  "keep": [],
+  "slots": {
+   "photo": [
+    11,
+    13,
+    15,
+    16,
+    25,
+    27,
+    28,
+    32
+   ],
+   "text": [],
+   "pattern": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    14,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    26,
+    29,
+    30,
+    31
+   ],
+   "technical": [
+    22
+   ]
+  },
+  "colors": [
+   {
+    "id": "zelenyy",
+    "name": "Зелёный",
+    "hue": 160,
+    "spread": 1,
+    "swatch": "#12b886"
+   },
+   {
+    "id": "siniy",
+    "name": "Синий",
+    "hue": 215,
+    "swatch": "#1d4fd6"
+   },
+   {
+    "id": "krasnyy",
+    "name": "Красный",
+    "hue": 355,
+    "swatch": "#c8102e"
+   },
+   {
+    "id": "oranzhevyy",
+    "name": "Оранжевый",
+    "hue": 24,
+    "swatch": "#ea6a12"
+   },
+   {
+    "id": "fioletovyy",
+    "name": "Фиолетовый",
+    "hue": 272,
+    "swatch": "#7a2fd0"
+   },
+   {
+    "id": "biryuzovyy",
+    "name": "Бирюзовый",
+    "hue": 185,
+    "swatch": "#0ea5b4"
+   },
+   {
+    "id": "rozovyy",
+    "name": "Розовый",
+    "hue": 330,
+    "swatch": "#d6247a"
+   },
+   {
+    "id": "seryy",
+    "name": "Серый",
+    "hue": 160,
+    "sat": 0,
+    "light": 1.1,
+    "swatch": "#8a8f98"
+   }
+  ],
+  "layout": "sport-volna/layout.jpg",
+  "thumb": "sport-volna/thumb.webp"
+ },
+ "sport-mozaika": {
+  "code": "Ш-004",
+  "title": "Мозаика",
+  "free": true,
+  "colors": [
+   {
+    "id": "krasnyy-siniy",
+    "name": "Красный и синий",
+    "hue": 8,
+    "spread": 1,
+    "second": {
+     "base": 240,
+     "hue": 240
+    },
+    "swatch": "linear-gradient(135deg,#e8411f 50%,#2c2f9e 50%)"
+   },
+   {
+    "id": "oranzhevyy-siniy",
+    "name": "Оранжевый и синий",
+    "hue": 26,
+    "second": {
+     "base": 240,
+     "hue": 225
+    },
+    "swatch": "linear-gradient(135deg,#ee7a1a 50%,#2346b8 50%)"
+   },
+   {
+    "id": "zelenyy-siniy",
+    "name": "Зелёный и синий",
+    "hue": 145,
+    "second": {
+     "base": 240,
+     "hue": 222
+    },
+    "swatch": "linear-gradient(135deg,#19c46a 50%,#2348b5 50%)"
+   },
+   {
+    "id": "biryuzovyy-siniy",
+    "name": "Бирюзовый и синий",
+    "hue": 180,
+    "second": {
+     "base": 240,
+     "hue": 232
+    },
+    "swatch": "linear-gradient(135deg,#1cc7d4 50%,#2a4fbf 50%)"
+   },
+   {
+    "id": "fioletovyy-rozovyy",
+    "name": "Фиолетовый и розовый",
+    "hue": 275,
+    "second": {
+     "base": 240,
+     "hue": 330
+    },
+    "swatch": "linear-gradient(135deg,#8a2be2 50%,#d6247a 50%)"
+   },
+   {
+    "id": "krasnyy-chernyy",
+    "name": "Красный и чёрный",
+    "hue": 4,
+    "second": {
+     "base": 240,
+     "hue": 240,
+     "sat": 0,
+     "light": 0.35
+    },
+    "swatch": "linear-gradient(135deg,#e33b1f 50%,#2b2b2b 50%)"
+   },
+   {
+    "id": "siniy-chernyy",
+    "name": "Синий и чёрный",
+    "hue": 222,
+    "second": {
+     "base": 240,
+     "hue": 240,
+     "sat": 0,
+     "light": 0.35
+    },
+    "swatch": "linear-gradient(135deg,#2462e0 50%,#2b2b2b 50%)"
+   },
+   {
+    "id": "zelenyy-chernyy",
+    "name": "Зелёный и чёрный",
+    "hue": 140,
+    "second": {
+     "base": 240,
+     "hue": 240,
+     "sat": 0,
+     "light": 0.35
+    },
+    "swatch": "linear-gradient(135deg,#1fbf5a 50%,#2b2b2b 50%)"
+   }
+  ],
+  "slots": {
+   "photo": [],
+   "text": []
+  },
+  "layout": "sport-mozaika/layout.jpg",
+  "thumb": "sport-mozaika/thumb.webp",
+  "baseHue": 8,
+  "keep": []
+ }
+}

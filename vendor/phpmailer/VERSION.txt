@@ -1,0 +1,2 @@
+PHPMailer v7.1.1
+https://github.com/PHPMailer/PHPMailer/tree/v7.1.1

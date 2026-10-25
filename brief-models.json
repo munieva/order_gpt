@@ -1,0 +1,66 @@
+{
+  "football-logo": {
+    "sport": "football",
+    "title": "Футбольный мяч с вашим логотипом",
+    "sizes": [
+      "5",
+      "4",
+      "3"
+    ],
+    "description": "Размеры 5, 4 и 3, 32 панели. Укажите цвета и количество повторений каждого логотипа.",
+    "production": "2–4 рабочих дня после утверждения макета и оплаты.",
+    "url": "https://moymyach.ru/imennoy/tproduct/2130260501-883695848061-futbolnii-myach-s-vashim-logotipom"
+  },
+  "basket-8": {
+    "sport": "basketball",
+    "title": "Баскетбольный мяч, 8 панелей",
+    "sizes": [
+      "7",
+      "6",
+      "5"
+    ],
+    "description": "Классический мяч, 8 панелей. Для игры в зале. Композитная кожа / микрофибра (PU).",
+    "production": "Срок производства подтвердит менеджер с учётом модели, способа нанесения и тиража после согласования макета и оплаты.",
+    "url": "https://moymyach.ru/catalog_personalized/tproduct/2056397201-330834211661-individualnii-basketbolnii-myach-s-pecha"
+  },
+  "basket-white": {
+    "sport": "basketball",
+    "title": "Баскетбольный мяч, белый шов, 8 панелей",
+    "sizes": [
+      "7"
+    ],
+    "description": "8 панелей, белые швы. Размер №7. Для игры в зале.",
+    "production": "Срок производства подтвердит менеджер с учётом модели, способа нанесения и тиража после согласования макета и оплаты.",
+    "url": "https://moymyach.ru/catalog_personalized/tproduct/2056397201-857876927532-basketbolnii-myach-belii-shov"
+  },
+  "basket-orange": {
+    "sport": "basketball",
+    "title": "Баскетбольный мяч, оранжевый шов, 8 панелей",
+    "sizes": [
+      "7"
+    ],
+    "description": "8 панелей, оранжевые швы. Размер №7. Для игры в зале.",
+    "production": "Срок производства подтвердит менеджер с учётом модели, способа нанесения и тиража после согласования макета и оплаты.",
+    "url": ""
+  },
+  "basket-bolax": {
+    "sport": "basketball",
+    "title": "Баскетбольный мяч 3×3",
+    "sizes": [
+      "3x3"
+    ],
+    "description": "Формат 3×3: окружность 72–74 см, вес 580–620 г. Возможно брендирование всей поверхности.",
+    "production": "Срок производства подтвердит менеджер с учётом модели, способа нанесения и тиража после согласования макета и оплаты.",
+    "url": "https://moymyach.ru/catalog_personalized/tproduct/2056397201-261423895502-basketbolnii-myach-bolax-3h3"
+  },
+  "basket-14": {
+    "sport": "basketball",
+    "title": "Баскетбольный мяч, 14 панелей",
+    "sizes": [
+      "7"
+    ],
+    "description": "14 панелей. Размер №7. Для игры в зале.",
+    "production": "Срок производства подтвердит менеджер с учётом модели, способа нанесения и тиража после согласования макета и оплаты.",
+    "url": "https://moymyach.ru/catalog_personalized/tproduct/2056397201-224394845742-basketbolnii-myach-14-panelei"
+  }
+}

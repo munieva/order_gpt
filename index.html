@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ed1a3f">
+<title>Заказать мяч — материалы для заказа | Мой мяч</title>
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preload" href="assets/fonts/golos-text-cyrillic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/unbounded-cyrillic-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/brand-fonts.css?v=1">
+<link rel="stylesheet" href="wizard.css?v=17">
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <a href="./" class="brand"><img src="assets/moymyach-logo.svg" alt="Фабрика Мой мяч" width="210" height="43"></a>
+    <nav class="contacts" aria-label="Связаться с нами">
+      <a href="https://max.ru/u/f9LHodD0cOLhce6qlzY8PDAWNGWKOXteOUejsyzeLoEl7tlQ4YE5VmTmf40" target="_blank" rel="noopener" aria-label="Написать в MAX" title="MAX"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z"/><circle cx="12" cy="12" r="3.2"/></svg></a>
+      <a href="https://t.me/moymyach" target="_blank" rel="noopener" aria-label="Написать в Telegram @moymyach" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4.5 3 11.4l5.6 2 2.2 6.1 3.2-3.6 4.6 3.6z"/><path d="m8.6 13.4 8.8-6.1"/></svg></a>
+      <a href="https://vk.ru/moymyach" target="_blank" rel="noopener" aria-label="Мы во ВКонтакте" title="ВКонтакте"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12.9 17.5C6.7 17.5 3.2 13.2 3 6h3.1c.1 5.3 2.5 7.5 4.3 8V6h2.9v4.5c1.8-.2 3.7-2.3 4.3-4.5h2.9c-.5 2.8-2.5 4.9-3.9 5.7 1.4.7 3.7 2.5 4.6 5.8h-3.2c-.7-2.2-2.4-3.9-4.7-4.1v4.1z"/></svg></a>
+      <a href="mailto:moymyach@mail.ru" aria-label="Написать на почту moymyach@mail.ru" title="moymyach@mail.ru"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a>
+      <a href="tel:+74992907928" class="phone" aria-label="Позвонить +7 (499) 290-79-28"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h3l1.4 4-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4 1.4v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg><span>+7 (499) 290-79-28</span></a>
+    </nav>
+  </div>
+</header>
+
+<div id="draft-banner" class="banner" hidden>
+  <div class="banner-in">
+    <span id="draft-banner-text">Мы восстановили ваш незаконченный заказ.</span>
+    <button type="button" id="draft-reset" class="link-btn">Начать заново</button>
+  </div>
+</div>
+
+<main>
+  <div class="draft-line"><span id="draft-status" class="draft-status" role="status" hidden></span></div>
+  <div id="connection" class="notice" role="status">Подключаемся к форме…</div>
+
+  <form id="wizard" novalidate>
+
+    <!-- 0. РАЗВИЛКА -->
+    <section class="step" data-step="choose" aria-labelledby="choose-title">
+      <div class="lead">
+        <h1 id="choose-title">Какой мяч вы хотите заказать?</h1>
+        <p>Выберите мяч — и откроется форма заказа. Заполнение займёт около 5 минут, черновик сохраняется сам.</p>
+      </div>
+
+      <fieldset class="choose-group">
+        <legend><span class="num">01</span> Вид спорта</legend>
+        <div class="cards cards-2">
+          <label class="card">
+            <input type="radio" name="sport" value="football" required>
+            <svg class="card-icon" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="25"/><path d="M28 17l8 6-3 9h-10l-3-9zM28 3v14M36 23l13-4M33 32l8 11M23 32l-8 11M20 23l-13-4"/></svg>
+            <span class="card-text"><span class="card-title">Футбольный</span><span class="card-hint">Размеры 5, 4, 3 · 32 панели</span></span>
+          </label>
+          <label class="card">
+            <input type="radio" name="sport" value="basketball">
+            <svg class="card-icon" viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="25"/><path d="M3 28h50M28 3v50M10 10c8 8 8 28 0 36M46 10c-8 8-8 28 0 36"/></svg>
+            <span class="card-text"><span class="card-title">Баскетбольный</span><span class="card-hint">Размеры 5, 6, 7 и мяч 3×3</span></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="choose-group" hidden>
+        <legend><span class="num">02</span> Оформление</legend>
+        <div class="cards cards-2">
+          <label class="card card-tall" id="design-photo-card">
+            <input type="radio" name="design" value="photo" required>
+            <span class="card-text">
+              <span class="card-title">Мяч с фото</span>
+              <span class="card-hint">Фото игроков, фамилии и номера. До 32 фото, из них до 2 групповых.</span>
+              <span class="card-note" id="photo-note">Подарок команде, тренеру, выпускникам</span>
+            </span>
+          </label>
+          <label class="card card-tall">
+            <input type="radio" name="design" value="logo">
+            <span class="card-text">
+              <span class="card-title">Мяч с логотипом</span>
+              <span class="card-hint" id="logo-hint">Логотипы и надписи компании или клуба.</span>
+              <span class="card-note">Тираж для клуба, турнира, корпоратива</span>
+            </span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="choose-bar" hidden>
+        <div><span class="muted">Ваш выбор</span><strong id="choice-summary">Выберите вид спорта и оформление</strong></div>
+        <button type="button" class="btn btn-primary" data-next>Перейти к заказу <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 9h10M10 5l4 4-4 4"/></svg></button>
+      </div>
+    </section>
+
+    <!-- ПРОГРЕСС -->
+    <ol class="progress" id="progress" hidden>
+      <li data-for="ball"><span class="bar"></span><span class="lbl">1. Мяч</span></li>
+      <li data-for="design"><span class="bar"></span><span class="lbl" data-label-photo="2. Лого, фото, текст" data-label-logo="2. Оформление">2. Оформление</span></li>
+      <li data-for="delivery"><span class="bar"></span><span class="lbl">3. Получение и оплата</span></li>
+      <li data-for="contacts"><span class="bar"></span><span class="lbl">4. Контакты</span></li>
+    </ol>
+
+    <div class="layout" id="layout" hidden>
+      <div class="main-col">
+
+        <!-- 1. МЯЧ -->
+        <section class="step panel" data-step="ball" aria-labelledby="ball-title" hidden>
+          <div class="panel-head">
+            <h1 id="ball-title" class="step-title">Мяч</h1>
+            <p class="muted"><span id="ball-subtitle"></span> · <button type="button" class="link-btn" data-goto="choose">изменить</button></p>
+          </div>
+
+          <div data-show="logo">
+            <div class="field">
+              <label for="model">Модель <span class="req">*</span></label>
+              <select id="model" name="model" required><option value="">Выберите модель</option></select>
+              <p class="hint" id="model-description" aria-live="polite"></p>
+              <a id="model-link" class="small-link" target="_blank" rel="noopener" hidden>Посмотреть модель в каталоге</a>
+            </div>
+
+            <fieldset class="field">
+              <legend>Размер <span class="req">*</span></legend>
+              <div class="pills" id="sizes"><span class="hint">Сначала выберите модель</span></div>
+            </fieldset>
+          </div>
+
+          <fieldset class="field" data-show="photo">
+            <legend>Размер <span class="req">*</span></legend>
+            <div class="pills">
+              <label class="pill"><input type="radio" name="photoSize" value="5" required checked>Размер 5</label>
+              <label class="pill"><input type="radio" name="photoSize" value="4" required>Размер 4</label>
+              <label class="pill"><input type="radio" name="photoSize" value="3" required>Размер 3</label>
+            </div>
+          </fieldset>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="quantity">Количество мячей <span class="req">*</span></label>
+              <input id="quantity" name="quantity" type="number" inputmode="numeric" min="1" max="100000" step="1" required placeholder="Например, 10">
+            </div>
+            <div class="field">
+              <label for="colors">Цвета мяча <span class="req">*</span></label>
+              <input id="colors" name="colors" maxlength="500" required placeholder="Например, белый с синим">
+            </div>
+          </div>
+
+          <div data-show="basketball logo">
+            <div class="field">
+              <label for="material">Материал и цвет</label>
+              <select id="material" name="material">
+                <option value="factory">Материал заводского цвета</option>
+                <option value="pantone">Индивидуальная окраска по Pantone</option>
+                <option value="help">Нужна помощь с выбором</option>
+              </select>
+              <p class="hint">Композитная кожа на основе PU. Заводской цвет помогает сохранить цепкость; дополнительная окраска может немного снизить сцепление. <a href="https://moymyach.ru/basket_pu" target="_blank" rel="noopener">Материалы и доступные цвета</a></p>
+            </div>
+            <div class="field" id="pantone-field" data-when="material=pantone">
+              <label for="materialColor">Номер Pantone или ссылка на образец</label>
+              <input id="materialColor" name="materialColor" maxlength="500" placeholder="Например, Pantone 186 C">
+            </div>
+            <div class="field">
+              <label for="printing">Способ нанесения</label>
+              <select id="printing" name="printing">
+                <option value="print">Печать</option>
+                <option value="emboss">Тиснение</option>
+                <option value="combined">Печать и тиснение</option>
+                <option value="help">Помогите выбрать</option>
+              </select>
+              <p class="hint">Возможность нанесения на выбранную модель и стоимость подтвердит менеджер. <a href="https://moymyach.ru/tisnenine" target="_blank" rel="noopener">О печати и тиснении</a></p>
+            </div>
+            <div class="field" id="emboss-field" data-when="printing=emboss|combined">
+              <label for="embossing">Что выполнить тиснением?</label>
+              <textarea id="embossing" name="embossing" rows="2" maxlength="1000" placeholder="Например, логотип клуба — тиснением, надпись — печатью"></textarea>
+            </div>
+          </div>
+
+          <div class="field" data-show="logo">
+            <label for="placement">Расположение логотипов и надписей <span class="opt">по желанию</span></label>
+            <textarea id="placement" name="placement" rows="3" maxlength="2000" placeholder="Что разместить на разных сторонах мяча, какого размера"></textarea>
+          </div>
+        </section>
+
+        <!-- 2. ОФОРМЛЕНИЕ / ФОТО -->
+        <section class="step panel" data-step="design" aria-labelledby="design-title" hidden>
+
+          <!-- Фото -->
+          <div data-show="photo">
+            <div class="panel-head">
+              <h1 id="design-title" class="step-title">Раскладка мяча</h1>
+              <p class="muted">Нажмите на панель, чтобы добавить логотип, фото или текст. На одной панели — один элемент.</p>
+            </div>
+
+            <section class="pe" id="pe" aria-labelledby="pe-title">
+              <h2 id="pe-title" class="visually-hidden">Редактор раскладки</h2>
+              <div class="pe-pick" id="pe-pick" hidden>
+                <span class="pe-pick-t">Шаблоны</span>
+                <div class="tpls-grid tpls-row" id="pe-pick-grid" role="group" aria-label="Шаблоны мяча"></div>
+              </div>
+              <div class="pe-tpl" id="pe-tpl" hidden>
+                <div class="pe-tpl-head"><span>Шаблон <b id="pe-tpl-name"></b></span><button type="button" class="pe-tpl-off" id="pe-tpl-off">Убрать шаблон</button></div>
+                <div class="pe-tpl-colors" id="pe-tpl-colors" role="group" aria-label="Цвет узора шаблона"></div>
+                <p class="pe-tpl-hint" id="pe-tpl-hint"></p>
+              </div>
+              <div class="pe-bar">
+                <div class="pe-seg" id="pe-layout-seg" role="group" aria-label="Схема мяча">
+                  <button type="button" data-layout="32" aria-pressed="true">32 панели</button>
+                  <button type="button" data-layout="groups" aria-pressed="false">30 панелей</button>
+                </div>
+                <div class="pe-seg" role="group" aria-label="Вид">
+                  <button type="button" data-view="flat" aria-pressed="true">Раскладка</button>
+                  <button type="button" data-view="3d" aria-pressed="false">3D-мяч</button>
+                </div>
+              </div>
+              <p class="pe-status" id="pe-status" aria-live="polite"></p>
+              <div class="pe-stage">
+                <svg id="pe-svg" viewBox="0 0 700 1405" role="group" aria-label="Схема панелей мяча"></svg>
+                <div id="pe-3d" class="pe-3d" hidden><p class="pe-3d-msg" id="pe-3d-msg">Загружаем 3D-модель…</p></div>
+              </div>
+              <p class="pe-legend"><span><i class="sw sw-free"></i>свободна</span><span><i class="sw sw-busy"></i>занята</span><span><i class="sw sw-check"></i>проверьте данные</span><span><i class="sw sw-tech"></i>22 — техническая панель (ниппель), не заполняется</span><span class="pe-note">Фамилии и номера на схему не наносятся — их увидит дизайнер.</span></p>
+            </section>
+
+            <div class="warn" role="note">
+              <svg viewBox="0 0 22 22" aria-hidden="true"><path d="M11 2l9.5 17h-19z"/><path d="M11 9v4M11 16v.5"/></svg>
+              <div><strong>Пишите фамилию, имя и текст полностью и внимательно</strong><span>Мы переносим подписи на мяч в точности как вы их указали: не исправляем и не дописываем сокращения.</span></div>
+            </div>
+
+            <label class="drop" id="photo-drop">
+              <input type="file" id="photo-input" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp,.svg,.ai,.eps,.cdr,.pdf" multiple>
+              <span class="drop-title"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v14M3 10h14"/></svg> Загрузить сразу несколько файлов</span>
+              <span class="hint">Разложим по свободным панелям. Если файл назван «7-Иванов Иван 10.jpg» — он встанет на панель 7, имя и номер заполнятся сами. JPG, PNG, WebP до 10 МБ; CDR, AI, EPS, SVG, PDF до 25 МБ.</span>
+            </label>
+
+            <div class="list-head">
+              <h2 id="photo-count">Размещено: 0</h2>
+            </div>
+            <ol id="pe-list" class="pe-list"></ol>
+            <p class="hint" id="panel-warning" role="status" hidden></p>
+          </div>
+
+          <!-- Логотипы -->
+          <div data-show="logo">
+            <div class="panel-head">
+              <h1 class="step-title">Оформление мяча</h1>
+              <p class="muted">Загрузите логотипы и опишите надписи. По этим материалам дизайнер подготовит макет.</p>
+            </div>
+            <div class="sub">
+              <h2>Логотипы</h2>
+              <p class="hint">Один файл на каждый логотип. Вектор — AI, EPS, CDR, SVG или PDF до 25 МБ (лучше всего для печати). Картинка — JPG, PNG или WebP до 10 МБ.</p>
+              <div id="logos" class="items"></div>
+              <button type="button" class="add" id="add-logo"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12"/></svg> Добавить логотип</button>
+            </div>
+          </div>
+
+          <div class="sub" data-show="logo">
+            <h2>Надписи <span class="opt">по желанию</span></h2>
+            <p class="hint">Каждую надпись — отдельно, так, как её нужно напечатать на мяче.</p>
+            <div id="inscriptions" class="items"></div>
+            <button type="button" class="add" id="add-inscription"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12M3 9h12"/></svg> Добавить надпись</button>
+          </div>
+
+          <details class="more" data-show="logo">
+            <summary>Требования к файлам для готового макета</summary>
+            <ul>
+              <li>CMYK, растровые изображения — 300 dpi</li>
+              <li>Шрифты переведены в кривые</li>
+              <li>Важные элементы — не ближе 1 см от края</li>
+              <li>Без технических меток, линий реза и комментариев</li>
+            </ul>
+            <p data-show="basketball">Для тиснения нужен вектор AI, EPS или CDR: чёрно-белая заливка, замкнутые контуры, обводки переведены в объекты. Прикрепите его к логотипу выше или передайте ссылкой на диск.</p>
+            <p class="links" data-show="basketball"><a href="https://moymyach.ru/requirements_basket" target="_blank" rel="noopener">Требования к макету и сетки панелей</a> <a href="https://moymyach.ru/production_basket" target="_blank" rel="noopener">Как производится мяч</a></p>
+          </details>
+
+          <div class="field">
+            <label for="driveLink">Ссылка на облачный диск <span class="opt">по желанию</span></label>
+            <input id="driveLink" name="driveLink" type="url" inputmode="url" maxlength="2000" autocomplete="off" placeholder="Яндекс Диск, Google Диск, Облако Mail">
+            <p class="hint">Откройте доступ по ссылке, чтобы дизайнер смог посмотреть и скачать материалы.</p>
+          </div>
+        </section>
+
+        <!-- 3. ПОЛУЧЕНИЕ И ОПЛАТА -->
+        <section class="step panel" data-step="delivery" aria-labelledby="delivery-title" hidden>
+          <h1 id="delivery-title" class="step-title">Получение и оплата</h1>
+
+          <fieldset class="field">
+            <legend>Как получить мячи</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="delivery" value="cdek" checked> Доставка СДЭК</label>
+              <label class="choice"><input type="radio" name="delivery" value="pickup"> Самовывоз</label>
+            </div>
+          </fieldset>
+          <div class="field" data-when="delivery=cdek">
+            <label for="deliveryAddress">Адрес или пункт выдачи СДЭК <span class="req">*</span></label>
+            <textarea id="deliveryAddress" name="deliveryAddress" rows="2" maxlength="1000" required placeholder="Город, адрес и код пункта выдачи или адрес для курьера"></textarea>
+          </div>
+          <p class="hint" data-when="delivery=pickup">Место и время самовывоза согласуем с менеджером.</p>
+
+          <div class="field">
+            <label for="neededDate">Когда нужны мячи <span class="req">*</span></label>
+            <input id="neededDate" name="neededDate" type="date" required class="w-date">
+          </div>
+          <div class="term">
+            <strong id="production-terms">Срок производства — 2–4 рабочих дня после утверждения макета и оплаты.</strong>
+            <span>Время доставки в этот срок не входит. Возможность получения к выбранной дате подтвердит менеджер.</span>
+          </div>
+
+          <fieldset class="field">
+            <legend>Кто оплачивает</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="payer" value="individual" checked> Физическое лицо</label>
+              <label class="choice"><input type="radio" name="payer" value="company"> Юридическое лицо</label>
+            </div>
+            <p class="hint pay-note">Оплата — после согласования макета: ссылку на оплату пришлёт менеджер.</p>
+          </fieldset>
+          <div class="field promo-field">
+            <label for="promo">Промокод</label>
+            <input id="promo" name="promo" maxlength="40" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Например, MYACH10">
+            <p class="hint">Скидку по промокоду менеджер учтёт в счёте.</p>
+          </div>
+          <div class="company" data-when="payer=company">
+            <div class="grid-2">
+              <div class="field">
+                <label for="companyName">Название организации <span class="req">*</span></label>
+                <input id="companyName" name="companyName" maxlength="150" required placeholder="ООО «Пример»">
+              </div>
+              <div class="field">
+                <label for="inn">ИНН <span class="req">*</span></label>
+                <input id="inn" name="inn" inputmode="numeric" maxlength="12" pattern="[0-9]{10}|[0-9]{12}" required placeholder="10 или 12 цифр" title="10 или 12 цифр">
+              </div>
+            </div>
+            <div class="field">
+              <span class="label-like">Карточка с реквизитами <span class="opt">по желанию</span></span>
+              <div class="file-line">
+                <label class="btn btn-ghost btn-sm" for="requisites">Выбрать файл</label>
+                <input id="requisites" type="file" class="visually-hidden" accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png">
+                <span id="requisites-name" class="muted">Файл не выбран</span>
+                <button type="button" id="requisites-clear" class="icon-btn" aria-label="Убрать файл реквизитов" hidden><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14"/></svg></button>
+              </div>
+              <p class="hint">PDF, DOC, DOCX, XLS, XLSX, JPG или PNG до 10 МБ. Если не прикрепите — менеджер уточнит реквизиты.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. КОНТАКТЫ И ОТПРАВКА -->
+        <section class="step panel" data-step="contacts" aria-labelledby="contacts-title" hidden>
+          <h1 id="contacts-title" class="step-title">Контакты и отправка</h1>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="customerName">ФИО заказчика <span class="req">*</span></label>
+              <input id="customerName" name="customerName" maxlength="150" autocomplete="name" required placeholder="Иванов Иван Иванович">
+            </div>
+            <div class="field">
+              <label for="phone">Телефон <span class="req">*</span></label>
+              <input id="phone" name="phone" type="tel" maxlength="30" autocomplete="tel" required placeholder="+7 999 123-45-67">
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Электронная почта <span class="req">*</span></label>
+            <input id="email" name="email" type="email" maxlength="254" autocomplete="email" required placeholder="name@example.ru">
+            <p class="hint">Пришлём сюда номер заказа и ссылку на архив с вашими материалами.</p>
+          </div>
+          <p class="hint">Мессенджеры — по желанию. Укажите, где вам удобнее общаться.</p>
+          <div class="grid-3">
+            <div class="field"><label for="telegram">Telegram</label><input id="telegram" name="telegram" maxlength="200" placeholder="@username"></div>
+            <div class="field"><label for="max">MAX</label><input id="max" name="max" maxlength="200" placeholder="Телефон или ссылка"></div>
+            <div class="field"><label for="vk">ВКонтакте</label><input id="vk" name="vk" maxlength="200" placeholder="Ссылка на профиль"></div>
+          </div>
+
+          <div class="grid-2">
+            <div class="field">
+              <label for="team">Команда или клуб <span class="opt">по желанию</span></label>
+              <input id="team" name="team" maxlength="100" autocomplete="off" placeholder="Например, ФК «Метеор»">
+            </div>
+            <div class="field">
+              <label for="prevOrder">Номер заказа, если уже есть <span class="opt">по желанию</span></label>
+              <input id="prevOrder" name="prevOrder" maxlength="40" autocomplete="off" placeholder="Например, 34706">
+            </div>
+          </div>
+          <div class="field">
+            <label for="comments">Комментарии <span class="opt">по желанию</span></label>
+            <textarea id="comments" name="comments" rows="3" maxlength="4000" placeholder="Пожелания к дизайну и другие уточнения"></textarea>
+          </div>
+
+          <div class="review" id="review" aria-live="polite"></div>
+
+          <div class="checks">
+            <label class="check"><input id="privacy-consent" type="checkbox" required><span>Даю <a href="legal/consent.html" target="_blank" rel="noopener">согласие на обработку моих персональных данных</a>. <a href="legal/privacy.html" target="_blank" rel="noopener">Политика обработки данных</a>, оператор — ООО «Киберра».</span></label>
+            <label class="check"><input id="materials-confirmed" type="checkbox" required><span id="materials-text">Подтверждаю, что имею законные основания для передачи и использования материалов заказа. Ознакомлен(а) с <a href="legal/materials.html" target="_blank" rel="noopener">правилами передачи материалов</a>.</span></label>
+            <p class="hint" data-show="photo">Если на фото дети, учитывайте разрешения их законных представителей. Эта отметка не заменяет требуемые согласия и документы.</p>
+            <label class="check"><input id="confirmed" type="checkbox" required><span id="confirmed-text">Я проверил(а) данные заказа выше.</span></label>
+          </div>
+        </section>
+
+        <div id="error" class="error" role="alert" hidden></div>
+        <div id="sending" class="sending" role="status" hidden><span>Загружаем материалы — <b id="send-pct">0%</b>. Не закрывайте страницу.</span><progress id="send-bar" max="100" value="0"></progress></div>
+
+        <div class="nav" id="nav" hidden>
+          <button type="button" class="btn btn-ghost" data-back>Назад</button>
+          <button type="button" class="btn btn-primary" data-next id="next-btn">Далее</button>
+          <button type="submit" class="btn btn-primary" id="submit" hidden>Отправить заявку</button>
+        </div>
+      </div>
+
+      <aside class="side" id="side">
+        <div class="summary">
+          <span class="summary-kicker">Ваш заказ</span>
+          <strong id="sum-title">—</strong>
+          <ul id="sum-lines"></ul>
+          <p id="sum-terms" class="summary-terms"></p>
+        </div>
+        <section class="tpls" data-show="photo" data-only-step="design" aria-labelledby="tpls-title">
+          <div><h2 id="tpls-title">Шаблоны</h2><span>Готовый узор: остаётся добавить фото и надписи. Цвет узора — любой.</span></div>
+          <div class="tpls-grid" id="tpls-grid" role="group" aria-label="Шаблоны мяча"></div>
+        </section>
+        <div class="tip" data-show="logo" data-only-step="design">
+          <strong>Нет готового макета?</strong>
+          <span>Загрузите логотипы и опишите пожелания — дизайнер подготовит макет за 1 рабочий день.</span>
+        </div>
+      </aside>
+    </div>
+  </form>
+
+  <section id="success" class="success" hidden tabindex="-1">
+    <div class="success-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M10 21l7 7 14-15"/></svg></div>
+    <h1>Заявка получена</h1>
+    <p>Номер вашей заявки</p>
+    <strong id="receipt"></strong>
+    <p class="muted" id="success-mail">Мы отправили номер заявки и ссылку на архив с вашими материалами на вашу почту.</p>
+    <ol class="next-list">
+      <li>Дизайнер подготовит макет за 1 рабочий день и пришлёт на согласование.</li>
+      <li><b>Ссылку на оплату пришлёт менеджер.</b></li>
+      <li>После утверждения макета и оплаты мяч уйдёт в производство.</li>
+    </ol>
+    <p class="muted">Вопросы — по номеру заявки:</p>
+    <nav class="contacts contacts-wide" aria-label="Связаться с нами">
+      <a href="https://max.ru/u/f9LHodD0cOLhce6qlzY8PDAWNGWKOXteOUejsyzeLoEl7tlQ4YE5VmTmf40" target="_blank" rel="noopener" aria-label="Написать в MAX" title="MAX"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z"/><circle cx="12" cy="12" r="3.2"/></svg></a>
+      <a href="https://t.me/moymyach" target="_blank" rel="noopener" aria-label="Написать в Telegram @moymyach" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4.5 3 11.4l5.6 2 2.2 6.1 3.2-3.6 4.6 3.6z"/><path d="m8.6 13.4 8.8-6.1"/></svg></a>
+      <a href="https://vk.ru/moymyach" target="_blank" rel="noopener" aria-label="Мы во ВКонтакте" title="ВКонтакте"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12.9 17.5C6.7 17.5 3.2 13.2 3 6h3.1c.1 5.3 2.5 7.5 4.3 8V6h2.9v4.5c1.8-.2 3.7-2.3 4.3-4.5h2.9c-.5 2.8-2.5 4.9-3.9 5.7 1.4.7 3.7 2.5 4.6 5.8h-3.2c-.7-2.2-2.4-3.9-4.7-4.1v4.1z"/></svg></a>
+      <a href="mailto:moymyach@mail.ru" aria-label="Написать на почту moymyach@mail.ru" title="moymyach@mail.ru"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a>
+      <a href="tel:+74992907928" class="phone" aria-label="Позвонить +7 (499) 290-79-28"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h3l1.4 4-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4 1.4v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg><span>+7 (499) 290-79-28</span></a>
+    </nav>
+    <button id="new-order" type="button" class="btn btn-ghost">Оформить ещё одну заявку</button>
+  </section>
+</main>
+
+<footer class="foot"><nav class="contacts contacts-foot" aria-label="Связаться с нами">
+      <a href="https://max.ru/u/f9LHodD0cOLhce6qlzY8PDAWNGWKOXteOUejsyzeLoEl7tlQ4YE5VmTmf40" target="_blank" rel="noopener" aria-label="Написать в MAX" title="MAX"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.8L3.5 20.5l4.3-1.1A8.5 8.5 0 1 0 12 3.5z"/><circle cx="12" cy="12" r="3.2"/></svg></a>
+      <a href="https://t.me/moymyach" target="_blank" rel="noopener" aria-label="Написать в Telegram @moymyach" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 4.5 3 11.4l5.6 2 2.2 6.1 3.2-3.6 4.6 3.6z"/><path d="m8.6 13.4 8.8-6.1"/></svg></a>
+      <a href="https://vk.ru/moymyach" target="_blank" rel="noopener" aria-label="Мы во ВКонтакте" title="ВКонтакте"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12.9 17.5C6.7 17.5 3.2 13.2 3 6h3.1c.1 5.3 2.5 7.5 4.3 8V6h2.9v4.5c1.8-.2 3.7-2.3 4.3-4.5h2.9c-.5 2.8-2.5 4.9-3.9 5.7 1.4.7 3.7 2.5 4.6 5.8h-3.2c-.7-2.2-2.4-3.9-4.7-4.1v4.1z"/></svg></a>
+      <a href="mailto:moymyach@mail.ru" aria-label="Написать на почту moymyach@mail.ru" title="moymyach@mail.ru"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a>
+      <a href="tel:+74992907928" class="phone" aria-label="Позвонить +7 (499) 290-79-28"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 3.5h3l1.4 4-2 1.3a11 11 0 0 0 6.2 6.2l1.3-2 4 1.4v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg><span>+7 (499) 290-79-28</span></a>
+    </nav>Мой мяч · ООО «Киберра» · <a href="tel:+74992907928">+7 (499) 290-79-28</a> · <a href="mailto:moymyach@mail.ru">moymyach@mail.ru</a><br><a href="legal/privacy.html" target="_blank" rel="noopener">Политика обработки данных</a> · <a href="legal/consent.html" target="_blank" rel="noopener">Согласие</a> · <a href="legal/materials.html" target="_blank" rel="noopener">Правила передачи материалов</a></footer>
+
+<template id="logo-tpl">
+  <article class="item logo-item">
+    <div class="thumb thumb-sq"><img alt=""><span class="thumb-ph">Логотип</span></div>
+    <div class="item-body">
+      <div class="item-top">
+        <strong class="item-label"></strong>
+        <label class="btn btn-ghost btn-sm file-pick">Выбрать файл<input type="file" class="visually-hidden l-file" accept=".jpg,.jpeg,.png,.webp,.pdf,.ai,.eps,.cdr,.svg"></label>
+      </div>
+      <span class="file-name muted">Файл не выбран</span>
+      <div class="logo-fields">
+        <label class="mini">Повторить на мяче<span class="repeat"><input class="l-repeats" type="number" min="1" step="1" value="1" inputmode="numeric"> раз</span></label>
+        <label class="mini">Пожелания к этому логотипу<input class="l-note" maxlength="500" placeholder="Например, крупно на лицевой стороне"></label>
+      </div>
+    </div>
+    <button type="button" class="icon-btn remove" aria-label="Удалить логотип"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14"/></svg></button>
+  </article>
+</template>
+
+<template id="text-tpl">
+  <div class="text-item">
+    <label class="mini"><span class="item-label"></span><input class="t-text" maxlength="1000" placeholder="Например, ФК «Звезда» · Кубок 2026"></label>
+    <button type="button" class="icon-btn remove" aria-label="Удалить надпись"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14"/></svg></button>
+  </div>
+</template>
+
+<dialog id="pe-card" class="pe-card" aria-labelledby="pc-title">
+  <form method="dialog" id="pc-form" novalidate>
+    <div class="pc-head">
+      <div><h2 id="pc-title">Панель <span id="pc-num"></span></h2><span id="pc-shape" class="muted"></span></div>
+      <button type="button" class="icon-btn" id="pc-close" aria-label="Закрыть"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="M4 4l10 10M14 4L4 14"/></svg></button>
+    </div>
+    <div class="pc-file" id="pc-drop">
+      <div class="pc-prev" id="pc-prev"><span class="pc-empty">Файл не выбран</span></div>
+      <div class="pc-file-info">
+        <span id="pc-fname" class="pc-fname"></span>
+        <label class="btn btn-ghost btn-sm">Выбрать файл<input type="file" id="pc-input" class="visually-hidden" accept="image/jpeg,image/png,image/webp,.jpg,.jpeg,.png,.webp,.svg,.ai,.eps,.cdr,.pdf"></label>
+        <span class="hint">JPG, PNG, WebP до 10 МБ · CDR, AI, EPS, SVG, PDF до 25 МБ. Можно перетащить файл сюда.</span>
+      </div>
+    </div>
+    <div class="pc-rot" id="pc-rot">
+      <div class="pc-rot-top"><span class="pc-rot-l">Положение на панели</span><button type="button" class="pc-rot-reset" id="pc-rot-reset" hidden>Сбросить</button></div>
+      <div class="pc-rot-row">
+        <span class="pc-rot-k">Размер</span>
+        <button type="button" class="pc-rb pc-ri" data-zoom="-10" aria-label="Уменьшить"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10"/></svg></button>
+        <input type="range" id="pc-zoom-range" min="30" max="300" step="1" value="100" aria-label="Размер изображения, процентов">
+        <button type="button" class="pc-rb pc-ri" data-zoom="10" aria-label="Увеличить"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10M10 5v10"/></svg></button>
+        <output id="pc-zoom-val" class="pc-rot-v">100%</output>
+      </div>
+      <div class="pc-rot-row">
+        <span class="pc-rot-k">Поворот</span>
+        <button type="button" class="pc-rb pc-ri" data-rot="-90" aria-label="Повернуть на 90° против часовой стрелки"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8a6 6 0 1 1 0 5"/><path d="M4 3v5h5"/></svg></button>
+        <input type="range" id="pc-rot-range" min="-180" max="180" step="1" value="0" aria-label="Угол поворота, градусов">
+        <button type="button" class="pc-rb pc-ri" data-rot="90" aria-label="Повернуть на 90° по часовой стрелке"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M15 8a6 6 0 1 0 0 5"/><path d="M16 3v5h-5"/></svg></button>
+        <output id="pc-rot-val" class="pc-rot-v">0°</output>
+      </div>
+      <span class="hint pc-rot-hint"><span id="pc-pan-hint">Перетащите фото в окошке с превью, чтобы сдвинуть, колесо мыши меняет размер. </span>Мяч — шар, панели стоят под разными углами: проверьте результат в режиме «3D-мяч».</span>
+    </div>
+    <p class="pc-valve" id="pc-valve" hidden><b>На этой панели ниппель</b> — в центре отверстие для накачки мяча. Центр изображения будет закрыт: не ставьте лицо или важную надпись в середину.</p>
+    <fieldset class="pc-types">
+      <legend>Тип изображения</legend>
+      <label class="pill"><input type="radio" name="pc-type" value="regular" checked>Индивидуальное</label>
+      <label class="pill"><input type="radio" name="pc-type" value="group">Групповое</label>
+      <label class="pill"><input type="radio" name="pc-type" value="main">Главное</label>
+      <label class="pill"><input type="radio" name="pc-type" value="logo">Логотип / эмблема</label>
+      <span class="hint pc-type-hint" id="pc-type-hint"></span>
+    </fieldset>
+    <div class="pc-grid">
+      <label class="mini">Фамилия имя или текст<input id="pc-caption" maxlength="150" autocomplete="off" placeholder="Например: Иванов Иван или ФК «Звезда»"></label>
+      <label class="mini">Номер<input id="pc-number" maxlength="3" inputmode="numeric" autocomplete="off" placeholder="5"></label>
+    </div>
+    <p class="hint pc-text-hint">Нужен только текст? Оставьте файл пустым — на панели будет надпись.</p>
+    <p class="pc-err" id="pc-err" role="alert" hidden></p>
+    <div class="pc-actions">
+      <button type="button" class="btn btn-ghost pc-del" id="pc-del">Удалить с панели</button>
+      <span class="pc-spacer"></span>
+      <button type="button" class="btn btn-ghost" id="pc-cancel">Отмена</button>
+      <button type="submit" class="btn btn-primary" id="pc-save">Сохранить</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="wizard.js?v=27"></script>
+</body>
+</html>
